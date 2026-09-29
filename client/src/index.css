@@ -1,0 +1,43 @@
+/* 
+  This is the main CSS file for the entire app.
+  
+  @import "tailwindcss" — this single line loads all of Tailwind's utility classes.
+  In Tailwind v4, you don't need a separate tailwind.config.js — configuration 
+  is done right here in CSS using @theme.
+*/
+@import "tailwindcss";
+
+/*
+  @theme lets us define our own custom design tokens.
+  These become Tailwind utility classes automatically.
+  For example, --color-primary becomes bg-primary, text-primary, border-primary, etc.
+  
+  We're using a blue/indigo palette for a professional project management feel.
+*/
+@theme {
+  --color-primary: #4f46e5;       /* indigo-600 — main brand color */
+  --color-primary-dark: #3730a3;  /* indigo-800 — hover state */
+  --color-primary-light: #e0e7ff; /* indigo-100 — light backgrounds */
+
+  --color-success: #16a34a;       /* green-600 */
+  --color-warning: #d97706;       /* amber-600 */
+  --color-danger: #dc2626;        /* red-600 */
+
+  --color-bg: #f8fafc;            /* very light gray — page background */
+  --color-surface: #ffffff;       /* white cards */
+  --color-border: #e2e8f0;        /* subtle borders */
+  --color-text: #1e293b;          /* near-black text */
+  --color-muted: #64748b;         /* gray text for secondary info */
+}
+
+/* 
+  Base styles applied to every page.
+  We set the font and background color at the root level
+  so every component inherits them automatically.
+*/
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}

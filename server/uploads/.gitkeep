@@ -1,0 +1,4 @@
+# uploads folder — for user profile pictures
+# Files uploaded by users will be stored here via Multer (Phase 9)
+# This .gitkeep file exists just to make git track this empty folder
+# The actual uploaded files are gitignored (see root .gitignore)
